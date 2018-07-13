@@ -14,29 +14,28 @@ function valideazaDateLivare(dateLivrare) {
 	var dateLivrareValide = true;
 
 	if (dateLivrare.codJudet == null || dateLivrare.codJudet.length == 0) {
-		showAlertDialog('Atentie!', 'Completati judetul.');
+		showAlertDialog('Внимание!', 'Попълнете област.');
 		dateLivrareValide = false;
 	}
 
 	if (dateLivrare.localitate == null || dateLivrare.localitate.length == 0) {
-		showAlertDialog('Atentie!', 'Completati localitatea.');
+		showAlertDialog('Внимание!', 'Попълнете населено място.');
 		dateLivrareValide = false;
 	}
 
 	if (dateLivrare.persContact == null || dateLivrare.persContact.length == 0) {
-		showAlertDialog('Atentie!', 'Completati persoana de contact.');
+		showAlertDialog('Внимание!', 'Попълнете лице за контакт.');
 		dateLivrareValide = false;
 	}
 
 	if (dateLivrare.telPersContact == null
 			|| dateLivrare.telPersContact.length == 0) {
-		showAlertDialog('Atentie!',
-				'Completati telefonul persoanei de contact.');
+		showAlertDialog('Внимание!', 'Попълнете телефон лице за контакт.');
 		dateLivrareValide = false;
 	}
 
 	if (dateLivrare.dataLivrare == null || dateLivrare.dataLivrare.length == 0) {
-		showAlertDialog('Atentie!', 'Completati data de livrare.');
+		showAlertDialog('Внимание!', 'Попълнете дата на доставка.');
 		dateLivrareValide = false;
 	}
 

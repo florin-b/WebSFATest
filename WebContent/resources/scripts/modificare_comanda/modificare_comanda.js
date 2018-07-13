@@ -117,7 +117,7 @@ function afisComenziModificare(listComenzi) {
 	if (listComenzi.length == 0) {
 		$('#cmd_modif_select').append($('<option>', {
 			value : 0,
-			text : "Nu exista comenzi"
+			text : "Няма поръчки"
 		}));
 	}
 

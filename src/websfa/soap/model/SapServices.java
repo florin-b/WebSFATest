@@ -16,8 +16,8 @@ import websfa.beans.ArticolSimplu;
 import websfa.beans.CautaPret;
 import websfa.beans.Status;
 import websfa.beans.articole.ArticolPret;
-import websfa.soap.client.ZTBLWEBSERVICE;
-import websfa.soap.client.ZTBLWEBSERVICE_Service;
+import websfa.soap.client2.ZTBLWEBSERVICE;
+import websfa.soap.client2.ZTBLWEBSERVICE_Service;
 import websfa.soap.handlers.TestHandler;
 import websfa.utils.ArticoleUtils;
 import websfa.utils.Constants;
@@ -55,7 +55,7 @@ public class SapServices {
 		ArticolPret articolPret = new ArticolPret();
 
 		ZTBLWEBSERVICE port = initWS();
-		addSOAPHandler(port);
+		//addSOAPHandler(port);
 
 		java.lang.String _zgetPrice_canal = "10";
 		java.lang.String _zgetPrice_city = "";

@@ -26,7 +26,6 @@ public class OperatiiAngajati {
 				PreparedStatement stmt = conn.prepareStatement(UserSqlQueries.getAgenti())) {
 
 			stmt.clearParameters();
-			// stmt.setString(1, filiala);
 			stmt.setString(1, departament);
 
 			stmt.executeQuery();

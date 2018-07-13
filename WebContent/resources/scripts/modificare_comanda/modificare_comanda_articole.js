@@ -147,7 +147,7 @@ function getPretArticol(codArticol) {
 	var umVanz = $('#umVanz' + codArticol).html();
 
 	if (!$.isNumeric(cantArticol)) {
-		showAlertDialogModif("Atentie!", "Cantitate invalida.");
+		showAlertDialogModif("Внимание!", "Невалидно количество.");
 		return;
 	}
 
@@ -210,12 +210,12 @@ function trateazaArticol(articolSelectat) {
 	var idTextProcent = '#procent_art' + articolSelectat.cod;
 
 	if (!$.isNumeric($(idTextPret).val())) {
-		showAlertDialogModif("Atentie!", "Valoare pret invalida.");
+		showAlertDialogModif("Внимание!", "Цена невалидна.");
 		return;
 	}
 
 	if (!$.isNumeric($(idTextProcent).val())) {
-		showAlertDialogModif("Atentie!", "Valoare procent invalida.");
+		showAlertDialogModif("Внимание!", "Процент отстъпка невалиден.");
 		return;
 	}
 

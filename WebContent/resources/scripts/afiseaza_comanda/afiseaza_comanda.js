@@ -67,7 +67,7 @@ function setContentComanda(idComanda) {
 function afisListComenzi(listComenzi) {
 
 	if (listComenzi.length == 0) {
-		showAlertDialogAfisare('Info', 'Nu exista comenzi.');
+		showAlertDialogAfisare('Info', 'Няма поръчки.');
 		return;
 	}
 
@@ -316,11 +316,11 @@ function getStareComanda(intStare) {
 
 	switch (Number(intStare)) {
 	case -1:
-		retVal = "Comanda nu a fost salvata.";
+		retVal = "Поръчката не е запазена.";	//Comanda nu a fost salvata
 		break;
 
 	case 0:
-		retVal = "Comanda emisa.";
+		retVal = "Издаена поръчка.";	//Comanda emisa
 		break;
 
 	case 1:
@@ -328,19 +328,19 @@ function getStareComanda(intStare) {
 		break;
 
 	case 2:
-		retVal = "Comanda aprobata.";
+		retVal = "Одобрена поръчка.";	//Comanda aprobata
 		break;
 
 	case 3:
-		retVal = "Comanda respinsa.";
+		retVal = "Неодобрена поръчка.";	//Comanda respinsa
 		break;
 
 	case 4:
-		retVal = "Comanda supusa unor conditii.";
+		retVal = "Поръчка с условия.";	//Comanda supusa unor conditii
 		break;
 
 	case 6:
-		retVal = "Comanda stearsa.";
+		retVal = "Изтрита поръчка.";	//Comanda stearsa
 		break;
 
 	case 7:

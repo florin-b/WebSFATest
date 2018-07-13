@@ -130,6 +130,8 @@ public class OperatiiArticole {
 	}
 
 	public ArticolPret getPret(CautaPret cautaPret) {
+		
+		System.out.println("Cauta pret = " + cautaPret);
 
 		ArticolPret articolPret;
 

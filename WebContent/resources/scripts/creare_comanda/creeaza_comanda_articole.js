@@ -177,7 +177,7 @@ function afisStocArticol(codArticol, dateStoc) {
 	var row = $('<tr></tr>');
 	$(row).appendTo(stocTable);
 
-	$('<td></td>').text('Stoc').attr('style', 'width:30%').appendTo(row);
+	$('<td></td>').text('Наличности').attr('style', 'width:30%').appendTo(row);
 
 	$('<td></td>', {
 		text : dateStoc.cantitate,
@@ -190,7 +190,7 @@ function afisStocArticol(codArticol, dateStoc) {
 	row = $('<tr></tr>');
 	$(row).appendTo(stocTable);
 
-	$('<td></td>').text('Cantitate').attr('style', 'width:30%').appendTo(row);
+	$('<td></td>').text('Количество').attr('style', 'width:30%').appendTo(row);
 
 	var textCant = $('<input/>', {
 		type : 'text',
@@ -222,7 +222,7 @@ function afisStocArticol(codArticol, dateStoc) {
 	var btnPretArt = $('<input>', {
 		type : 'button',
 		name : 'pret',
-		value : 'Pret',
+		value : 'Цена',
 		style : 'width:100%'
 	}).bind('click', {
 		articol : codArticol
@@ -244,7 +244,7 @@ function getPretArticol(codArticol) {
 	var umVanz = $('#umVanz' + codArticol).html();
 
 	if (!$.isNumeric(cantArticol)) {
-		showAlertDialog("Atentie!", "Cantitate invalida.");
+		showAlertDialog("Внимание!", "Невалидно количество.");
 		return;
 	}
 
@@ -295,7 +295,7 @@ function afisPretArticol(codArticol, datePret) {
 	var row = $('<tr></tr>');
 	$(row).appendTo(pretTable);
 
-	$('<td></td>').text('Pret').attr('style', 'width:30%').appendTo(row);
+	$('<td></td>').text('Цена').attr('style', 'width:30%').appendTo(row);
 
 	var textPret = $('<input/>', {
 		type : 'text',
@@ -356,7 +356,7 @@ function afisPretArticol(codArticol, datePret) {
 
 	var pretCuTva = parseFloat(datePret.pret) + parseFloat(valTVA);
 
-	$('<td></td>').text('Pret cu tva').attr('style', 'width:30%').css('color',
+	$('<td></td>').text('Цена с ДДС').attr('style', 'width:30%').css('color',
 			colorGroup1).appendTo(row);
 	$('<td></td>', {
 		id : 'prettva' + codArticol,
@@ -365,7 +365,7 @@ function afisPretArticol(codArticol, datePret) {
 
 	row = $('<tr></tr>');
 	$(row).appendTo(pretTable);
-	$('<td></td>').text('Discount client').attr('style', 'width:30%').css(
+	$('<td></td>').text('Отстъпка клиент').attr('style', 'width:30%').css(
 			'color', colorGroup1).appendTo(row);
 
 	var procentReducereClient = (100 - (datePret.pret / datePret.pretLista) * 100)
@@ -424,7 +424,7 @@ function afisPretArticol(codArticol, datePret) {
 	var btnAdaugaArt = $('<input>', {
 		type : 'button',
 		name : 'adauga',
-		value : 'Adauga',
+		value : 'Добави',
 		style : 'width:100%'
 	}).bind('click', {
 		articol : articolSelectat
@@ -455,12 +455,12 @@ function trateazaArticol(articolSelectat) {
 	var idTextProcent = '#procent_art' + articolSelectat.cod;
 
 	if (!$.isNumeric($(idTextPret).val())) {
-		showAlertDialog("Atentie!", "Valoare pret invalida.");
+		showAlertDialog("Внимание!", "Цена невалидна.");
 		return;
 	}
 
 	if (!$.isNumeric($(idTextProcent).val())) {
-		showAlertDialog("Atentie!", "Valoare procent invalida.");
+		showAlertDialog("Внимание!", "Процент отстъпка невалиден.");
 		return;
 	}
 
@@ -566,7 +566,7 @@ function getTabelaArticolNou(articol, poz) {
 	$('<td></td>').attr({
 		style : 'width:10%;text-align:right;'
 	}).text(parseFloat(articol.pretUnitar).toFixed(2)).appendTo(row);
-	$('<td></td>').text('RON').appendTo(row);
+	$('<td></td>').text('BGN').appendTo(row);
 
 	var btnEliminaArt = $('<img></img>', {
 		src : 'resources/images/minus.png'
@@ -729,7 +729,7 @@ function clearScreenArticole(e) {
 
 function showAlertDialog(tipAlert, mesajAlert) {
 	$('#tipAlertC').text(tipAlert);
-	$('#textAlertC').text(mesajAlert);
+	$('#textAlertC').html(mesajAlert);
 	$.mobile.changePage('#dialogCreare', {
 		transition : "none"
 	});

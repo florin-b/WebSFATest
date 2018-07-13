@@ -2,7 +2,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -147,10 +147,10 @@ hr {
 							<fieldset data-role="controlgroup" data-type="horizontal">
 
 								<input type="radio" name="radio-articol" id="radio-cod"
-									value="cod" checked="checked"> <label for="radio-cod">Cod
-									articol</label> <input type="radio" name="radio-articol"
-									id="radio-nume" value="nume"> <label for="radio-nume">Nume
-									articol</label>
+									value="cod" checked="checked"> <label for="radio-cod">Код
+									артикул </label> <input type="radio" name="radio-articol"
+									id="radio-nume" value="nume"> <label for="radio-nume">Име
+									артикул </label>
 							</fieldset>
 						</form>
 					</div>

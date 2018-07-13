@@ -86,8 +86,8 @@
 
 			</select> <br> <select name="modif_act_select" id="modif_act_select">
 				<option value="0">Изберете</option>
-				<option value="1">Adaugare articole</option>
-				<option value="2">Modificare date livrare</option>
+				<option value="1">Добави артикули</option>
+				<option value="2">Корекция дата доставка</option>
 			</select> <br> <br> <br>
 
 
